@@ -17,6 +17,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Bungee+Spice&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Ancizar+Serif:ital,wght@0,300..900;1,300..900&display=swap"
         rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
     <style>
         body {
             font-family: "Neuton", serif;
@@ -33,6 +35,15 @@
             font-optical-sizing: auto;
             font-weight: 200;
             font-style: normal;
+        }
+
+        .roboto-penilaian {
+            font-family: "Roboto", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: bold;
+            font-style: normal;
+            font-variation-settings:
+                "wdth" 100;
         }
     </style>
 </head>
@@ -87,7 +98,8 @@
     <!--Jumbotron-->
 
     <!--Form Penilaian-->
-    <form class="container p-3 mt-5 mb-5 ms-auto me-auto rounded shadow-lg ancizar-serif-jumbotron" name="advokasi-mighty-punch" style="background-color: #CD5656;">
+    <form class="container p-3 mt-5 mb-5 ms-auto me-auto rounded shadow-lg ancizar-serif-jumbotron"
+        name="advokasi-mighty-punch" style="background-color: #CD5656;">
         <div class="mb-3">
             <label for="formGroupExampleInput" class="form-label">Nama Lengkap</label>
             <input type="text" class="form-control" id="formGroupExampleInput" name="penilai"
@@ -108,138 +120,128 @@
         </ol>
 
 
-        <h3>1. Seberapa puas dengan rasa bar protein ini ?</h3>
+        <h3 class="roboto-penilaian">1. Seberapa puas dengan rasa bar protein ini ?</h3>
         <div class="form-check form-check-inline">
-            <input class="form-check-input" type="checkbox" name="kepuasan" id="inlineRadio1" value="1"
-                name="Kepuasan">
+            <input class="form-check-input" type="checkbox" name="kepuasan" id="inlineRadio1" value="Sangat tidak puas" name="Kepuasan">
             <label class="form-check-label" for="inlineRadio1">1</label>
         </div>
         <div class="form-check form-check-inline">
-            <input class="form-check-input" type="checkbox" name="kepuasan" id="inlineRadio2" value="2"
-                name="Kepuasan">
+            <input class="form-check-input" type="checkbox" name="kepuasan" id="inlineRadio2" value="Kurang Puas" name="Kepuasan">
             <label class="form-check-label" for="inlineRadio2">2</label>
         </div>
         <div class="form-check form-check-inline">
-            <input class="form-check-input" type="checkbox" name="kepuasan" id="inlineRadio3" value="3"
-                name="Kepuasan">
+            <input class="form-check-input" type="checkbox" name="kepuasan" id="inlineRadio3" value="Biasa saja" name="Kepuasan">
             <label class="form-check-label" for="inlineRadio3">3</label>
         </div>
         <div class="form-check form-check-inline">
-            <input class="form-check-input" type="checkbox" name="kepuasan" id="inlineRadio4" value="4"
-                name="Kepuasan">
+            <input class="form-check-input" type="checkbox" name="kepuasan" id="inlineRadio4" value="Cukup puas" name="Kepuasan">
             <label class="form-check-label" for="inlineRadio4">4</label>
         </div>
         <div class="form-check form-check-inline">
-            <input class="form-check-input" type="checkbox" name="kepuasan" id="inlineRadio5" value="5"
-                name="Kepuasan">
+            <input class="form-check-input" type="checkbox" name="kepuasan" id="inlineRadio5" value="Sangat puas" name="Kepuasan">
             <label class="form-check-label" for="inlineRadio5">5</label>
         </div>
 
-        <h3>2. Seberapa mudah jangkauan untuk membeli protein bar ini?</h3>
+        <h3 class="roboto-penilaian">2. Seberapa mudah jangkauan untuk membeli protein bar ini?</h3>
         <div class="form-check form-check-inline">
-            <input class="form-check-input" type="checkbox" name="kemudahan-membeli" id="inlineRadio1" value="1"
+            <input class="form-check-input" type="checkbox" name="kemudahan-membeli" id="inlineRadio1" value="Sangat tidak puas"
                 name="Kemudahan Membeli">
             <label class="form-check-label" for="inlineRadio1">1</label>
         </div>
         <div class="form-check form-check-inline">
-            <input class="form-check-input" type="checkbox" name="kemudahan-membeli" id="inlineRadio2" value="2"
+            <input class="form-check-input" type="checkbox" name="kemudahan-membeli" id="inlineRadio2" value="Kurang Puas"
                 name="Kemudahan Membeli">
             <label class="form-check-label" for="inlineRadio2">2</label>
         </div>
         <div class="form-check form-check-inline">
-            <input class="form-check-input" type="checkbox" name="kemudahan-membeli" id="inlineRadio3" value="3"
+            <input class="form-check-input" type="checkbox" name="kemudahan-membeli" id="inlineRadio3" value="Biasa saja"
                 name="Kemudahan Membeli">
             <label class="form-check-label" for="inlineRadio3">3</label>
         </div>
         <div class="form-check form-check-inline">
-            <input class="form-check-input" type="checkbox" name="kemudahan-membeli" id="inlineRadio4" value="4"
+            <input class="form-check-input" type="checkbox" name="kemudahan-membeli" id="inlineRadio4" value="Cukup puas"
                 name="Kemudahan Membeli">
             <label class="form-check-label" for="inlineRadio4">4</label>
         </div>
         <div class="form-check form-check-inline">
-            <input class="form-check-input" type="checkbox" name="kemudahan-membeli" id="inlineRadio5" value="5"
+            <input class="form-check-input" type="checkbox" name="kemudahan-membeli" id="inlineRadio5" value="Sangat puas"
                 name="Kemudahan Membeli">
             <label class="form-check-label" for="inlineRadio5">5</label>
         </div>
 
-        <h3>3. Seberapa mudah bar protein ini dibawa kemana-mana?</h3>
+        <h3 class="roboto-penilaian">3. Seberapa mudah bar protein ini dibawa kemana-mana?</h3>
         <div class="form-check form-check-inline">
-            <input class="form-check-input" type="checkbox" name="fleksibilitas" id="inlineRadio1" value="1"
+            <input class="form-check-input" type="checkbox" name="fleksibilitas" id="inlineRadio1" value="Sangat tidak puas"
                 name="Fleksibilitas">
             <label class="form-check-label" for="inlineRadio1">1</label>
         </div>
         <div class="form-check form-check-inline">
-            <input class="form-check-input" type="checkbox" name="fleksibilitas" id="inlineRadio2" value="2"
+            <input class="form-check-input" type="checkbox" name="fleksibilitas" id="inlineRadio2" value="Kurang Puas"
                 name="Fleksibilitas">
             <label class="form-check-label" for="inlineRadio2">2</label>
         </div>
         <div class="form-check form-check-inline">
-            <input class="form-check-input" type="checkbox" name="fleksibilitas" id="inlineRadio3" value="3"
+            <input class="form-check-input" type="checkbox" name="fleksibilitas" id="inlineRadio3" value="Biasa saja"
                 name="Fleksibilitas">
             <label class="form-check-label" for="inlineRadio3">3</label>
         </div>
         <div class="form-check form-check-inline">
-            <input class="form-check-input" type="checkbox" name="fleksibilitas" id="inlineRadio4" value="4"
+            <input class="form-check-input" type="checkbox" name="fleksibilitas" id="inlineRadio4" value="Cukup puas"
                 name="Fleksibilitas">
             <label class="form-check-label" for="inlineRadio4">4</label>
         </div>
         <div class="form-check form-check-inline">
-            <input class="form-check-input" type="checkbox" name="fleksibilitas" id="inlineRadio5" value="5"
+            <input class="form-check-input" type="checkbox" name="fleksibilitas" id="inlineRadio5" value="Sangat puas"
                 name="Fleksibilitas">
             <label class="form-check-label" for="inlineRadio5">5</label>
         </div>
 
-        <h3>4. Seberapa efektif terhadap kandungan protein di dalam bar ini?</h3>
+        <h3 class="roboto-penilaian">4. Seberapa efektif terhadap kandungan protein di dalam bar ini?</h3>
         <div class="form-check form-check-inline">
-            <input class="form-check-input" type="checkbox" name="kandungan-protein" id="inlineRadio1" value="1"
+            <input class="form-check-input" type="checkbox" name="kandungan-protein" id="inlineRadio1" value="Sangat tidak puas"
                 name="Kandungan Protein">
             <label class="form-check-label" for="inlineRadio1">1</label>
         </div>
         <div class="form-check form-check-inline">
-            <input class="form-check-input" type="checkbox" name="kandungan-protein" id="inlineRadio2" value="2"
+            <input class="form-check-input" type="checkbox" name="kandungan-protein" id="inlineRadio2" value="Kurang Puas"
                 name="Kandungan Protein">
             <label class="form-check-label" for="inlineRadio2">2</label>
         </div>
         <div class="form-check form-check-inline">
-            <input class="form-check-input" type="checkbox" name="kandungan-protein" id="inlineRadio3" value="3"
+            <input class="form-check-input" type="checkbox" name="kandungan-protein" id="inlineRadio3" value="Biasa saja"
                 name="Kandungan Protein">
             <label class="form-check-label" for="inlineRadio3">3</label>
         </div>
         <div class="form-check form-check-inline">
-            <input class="form-check-input" type="checkbox" name="kandungan-protein" id="inlineRadio4" value="4"
+            <input class="form-check-input" type="checkbox" name="kandungan-protein" id="inlineRadio4" value="Cukup puas"
                 name="Kandungan Protein">
             <label class="form-check-label" for="inlineRadio4">4</label>
         </div>
         <div class="form-check form-check-inline">
-            <input class="form-check-input" type="checkbox" name="kandungan-protein" id="inlineRadio5" value="5"
+            <input class="form-check-input" type="checkbox" name="kandungan-protein" id="inlineRadio5" value="Sangat puas"
                 name="Kandungan Protein">
             <label class="form-check-label" for="inlineRadio5">5</label>
         </div>
 
-        <h3>5. Apakah anda puas dengan harga protein bar ini ?</h3>
+        <h3 class="roboto-penilaian">5. Apakah anda puas dengan harga protein bar ini ?</h3>
         <div class="form-check form-check-inline">
-            <input class="form-check-input" type="checkbox" name="harga" id="inlineRadio1" value="1"
-                name="Harga">
+            <input class="form-check-input" type="checkbox" name="harga" id="inlineRadio1" value="Sangat tidak puas" name="Harga">
             <label class="form-check-label" for="inlineRadio1">1</label>
         </div>
         <div class="form-check form-check-inline">
-            <input class="form-check-input" type="checkbox" name="harga" id="inlineRadio2" value="2"
-                name="Harga">
+            <input class="form-check-input" type="checkbox" name="harga" id="inlineRadio2" value="Kurang Puas" name="Harga">
             <label class="form-check-label" for="inlineRadio2">2</label>
         </div>
         <div class="form-check form-check-inline">
-            <input class="form-check-input" type="checkbox" name="harga" id="inlineRadio3" value="3"
-                name="Harga">
+            <input class="form-check-input" type="checkbox" name="harga" id="inlineRadio3" value="Biasa saja" name="Harga">
             <label class="form-check-label" for="inlineRadio3">3</label>
         </div>
         <div class="form-check form-check-inline">
-            <input class="form-check-input" type="checkbox" name="harga" id="inlineRadio4" value="4"
-                name="Harga">
+            <input class="form-check-input" type="checkbox" name="harga" id="inlineRadio4" value="Cukup puas" name="Harga">
             <label class="form-check-label" for="inlineRadio4">4</label>
         </div>
         <div class="form-check form-check-inline">
-            <input class="form-check-input" type="checkbox" name="harga" id="inlineRadio5" value="5"
-                name="Harga">
+            <input class="form-check-input" type="checkbox" name="harga" id="inlineRadio5" value="Sangat puas" name="Harga">
             <label class="form-check-label" for="inlineRadio5">5</label>
         </div><br>
 
@@ -279,11 +281,13 @@
                 </div>
                 <div class="col-md-3">
                     <h4>Media Sosial</h4>
-                    <p><a href="https://www.instagram.com/mightypunch.id?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank"><img src="img/logo-ig.png" alt="" width="50" height="auto"></a></p>
+                    <p><a href="https://www.instagram.com/mightypunch.id?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+                            target="_blank"><img src="img/logo-ig.png" alt="" width="50" height="auto"></a></p>
                 </div>
                 <div class="col-md-3">
                     <h4>Gabung Komunitas</h4>
-                    <p><img src="img/logo-wa.png" alt="" width="50" height="auto"><a href="https://chat.whatsapp.com/DPKLNrA7C5Q4TMBo3UqyyT"
+                    <p><img src="img/logo-wa.png" alt="" width="50" height="auto"><a
+                            href="https://chat.whatsapp.com/DrlVol4JHUo3YpuAym8U07?fbclid=PAZXh0bgNhZW0CMTEAAaffbafYWuHYQE3EQzS4wtlXmhfB3QzUh5V46gfnJF0Xcr3j5e5BIqXK1aZY6A_aem_0gT0hHa0jM8Kf0_wudQumA"
                             class="p-2 rounded-pill shadow link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover text-white fw-bold"
                             style="background-color: #25D366;" target="_blank">Join Community</a></p>
                 </div>

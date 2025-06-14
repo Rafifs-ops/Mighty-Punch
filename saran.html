@@ -98,19 +98,19 @@
           <form name="kritik-saran-mighty-punch">
             <div class="mb-3">
               <label for="name" class="form-label">Nama Lengkap</label>
-              <input type="text" class="form-control" id="name" aria-describedby="name" name="nama">
+              <input type="text" class="form-control" id="name" aria-describedby="name" name="nama" required>
             </div>
             <div class="mb-3">
               <label for="email" class="form-label">Email</label>
-              <input type="email" class="form-control" id="email" aria-describedby="email" name="email">
+              <input type="email" class="form-control" id="email" aria-describedby="email" name="email" required>
             </div>
             <div class="mb-3">
               <label for="pesan" class="form-label">Kritik</label>
-              <textarea class="form-control" id="pesan" rows="3" name="kritik"></textarea>
+              <textarea class="form-control" id="pesan" rows="3" name="kritik" required></textarea>
             </div>
             <div class="mb-3">
               <label for="pesan" class="form-label">Saran</label>
-              <textarea class="form-control" id="pesan" rows="3" name="saran"></textarea>
+              <textarea class="form-control" id="pesan" rows="3" name="saran" required></textarea>
             </div>
             <button type="submit" class="btn btn-primary btn-kirim">Kirim</button>
             <button class="btn btn-primary btn-loading d-none" type="button" disabled>
@@ -151,7 +151,7 @@
                 </div>
                 <div class="col-md-3">
                     <h4>Gabung Komunitas</h4>
-                    <p><img src="img/logo-wa.png" alt="" width="50" height="auto"><a href="https://chat.whatsapp.com/DPKLNrA7C5Q4TMBo3UqyyT"
+                    <p><img src="img/logo-wa.png" alt="" width="50" height="auto"><a href="https://chat.whatsapp.com/DrlVol4JHUo3YpuAym8U07?fbclid=PAZXh0bgNhZW0CMTEAAaffbafYWuHYQE3EQzS4wtlXmhfB3QzUh5V46gfnJF0Xcr3j5e5BIqXK1aZY6A_aem_0gT0hHa0jM8Kf0_wudQumA"
                             class="p-2 rounded-pill shadow link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover text-white fw-bold"
                             style="background-color: #25D366;" target="_blank">Join Community</a></p>
                 </div>
@@ -173,10 +173,17 @@
         const form = document.forms['kritik-saran-mighty-punch']
         const btnKirim = document.querySelector('.btn-kirim');
         const btnLoading = document.querySelector('.btn-loading');
-        const myAlert = document.querySelector('.my-alert');
-
+        const myAlert = document.querySelector('.my-alert'); 
+        
         form.addEventListener('submit', e => {
             e.preventDefault()
+
+            if (!form.checkValidity()) {
+                // Tampilkan alert jika ada yang kosong atau tidak valid
+                alert('Mohon isi semua form dengan benar.');
+                // Hentikan eksekusi fungsi agar tidak lanjut ke fetch
+                return;
+            }
 
             //Hilangkan tombol kirim, munculkan tombol loading
             btnKirim.classList.toggle('d-none');
