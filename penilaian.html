@@ -9,25 +9,31 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Neuton:ital,wght@0,200;0,300;0,400;0,700;0,800;1,400&display=swap"
         rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Bungee+Spice&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Ancizar+Serif:ital,wght@0,300..900;1,300..900&display=swap"
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
     <style>
         body {
             font-family: "Neuton", serif;
         }
 
-        .bungee-spice-regular {
-            font-family: "Bungee Spice", sans-serif;
-            font-weight: 400;
+        .roboto-judul {
+            font-family: "Roboto", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 700;
             font-style: normal;
+            font-variation-settings:
+                "wdth" 100;
         }
 
         .ancizar-serif-jumbotron {
@@ -48,15 +54,14 @@
     </style>
 </head>
 
-<body style="background-color: #FF8282;">
+<body style="background-color: #F8EDED;">
 
     <!--Navbar-->
-    <nav class="navbar navbar-expand-lg shadow-sm sticky-top" style="background-color: #CD5656;">
+    <nav class="navbar navbar-expand-lg shadow-sm sticky-top" style="background-color: #CB1E12;">
         <div class="container">
-            <a class="navbar-brand" href="#">
-                <img src="img/logo-produk.png" alt="Logo" width="auto" height="24"
+            <a class="navbar-brand" href="index.html">
+                <img src="img/favicon.png" alt="Logo" width="auto" height="30"
                     class="d-inline-block align-text-top">
-                Mighty Punch
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -83,14 +88,14 @@
     <!--Navbar-->
 
     <!--Jumbotron-->
-    <div class="container justify-content-center mt-5 p-3 rounded shadow-lg" style="background-color: #CD5656;">
+    <div class="container justify-content-center mt-5 p-3 rounded shadow-lg" style="background-color: #CB1E12;">
         <div class="row text-white">
             <div class="col-md-6">
-                <h1 class="bungee-spice-regular">Nilai Produk Kami</h1>
-                <p class="ancizar-serif-jumbotron">Berikan penilaian Anda terhadap produk kami</p>
-                <img src="img/logo-produk.png" alt="" width="400" height="300" class="img-fluid">
+                <h1 class="roboto-judul" id="tulisan-jumbotron">Nilai Produk Kami</h1>
+                <p class="ancizar-serif-jumbotron" id="tulisan-jumbotron">Berikan penilaian Anda terhadap produk kami</p>
+                <img src="img/logo-produk.png" alt="" width="400" height="300" class="img-fluid" id="product-image">
             </div>
-            <div class="col-md-6">
+            <div class="col-md-6" id="jumbotron-image">
                 <img src="img/jumbotron-penilaian.png" alt="" class="img-fluid">
             </div>
         </div>
@@ -99,13 +104,13 @@
 
     <!--Form Penilaian-->
     <form class="container p-3 mt-5 mb-5 ms-auto me-auto rounded shadow-lg ancizar-serif-jumbotron"
-        name="advokasi-mighty-punch" style="background-color: #CD5656;">
-        <div class="mb-3">
+        name="advokasi-mighty-punch" style="background-color: #CB1E12;">
+        <div class="mb-3" data-aos="fade-right" data-aos-duration="1000">
             <label for="formGroupExampleInput" class="form-label">Nama Lengkap</label>
             <input type="text" class="form-control" id="formGroupExampleInput" name="penilai"
                 placeholder="Masukan nama...">
         </div>
-        <div class="mb-3">
+        <div class="mb-3" data-aos="fade-right" data-aos-duration="1500">
             <label for="exampleInputEmail1" class="form-label">Email address</label>
             <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="email">
         </div>
@@ -310,13 +315,11 @@
     <!--Form Penilaian-->
 
     <!--Footer-->
-    <section style="background-color: #CD5656;">
+    <section style="background-color: #CB1E12;">
         <footer class="container justify-content-center">
             <div class="row mb-3">
-                <div class="col-md-12">
-                    <h1 class="text-start text-white">
-                        <img src="img/logo-produk.png" alt="" width="auto" height="100"> Migthy Punch
-                    </h1>
+                <div class="col-md-12 mt-3 text-center" data-aos="fade-down" data-aos-duration="1000">
+                    <img src="img/favicon.png" alt="" width="auto" height="80">
                 </div>
             </div>
             <div class="row text-center text-white ancizar-serif-jumbotron">
@@ -414,6 +417,12 @@
                 })
                 .catch(error => console.error('Error!', error.message))
         })
+
+        AOS.init();
+        gsap.from('.navbar', {duration: 1.2, y: '-100%', opacity: 0, ease: 'bounce'})
+        gsap.from('#jumbotron-image', {duration: 1.5, y: '100%', opacity: 0, ease: 'bounce'})
+        gsap.from('#product-image', {duration: 1.5, rotateY: 360, opacity: 0, ease: 'bounce'})
+        gsap.from('#tulisan-jumbotron', {duration: 2, x: 200, opacity: 0, ease: 'bounce'})
     </script>
 
 </body>
