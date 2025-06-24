@@ -1,3 +1,7 @@
+.navbar-brand {
+    transition-duration: 1s;
+}
+
 .nav-link:hover {
     font-weight: bold;
     transform: translateY(-2px);
